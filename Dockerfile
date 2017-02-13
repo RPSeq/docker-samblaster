@@ -1,3 +1,5 @@
+# couldn't get samblaster to compile in alpine linux,
+#   but debian is small enough.
 FROM debian
 
 #Ryan Smith rsmith@genome.wustl.edu
@@ -19,5 +21,4 @@ RUN apt-get update && \
     cd .. && rm -rf /tmp/* && \
     apt-get -y --purge autoremove g++ make git
 
-ENTRYPOINT ["sh", "-c"]
-CMD ["/usr/local/bin/samblaster"]
+ENTRYPOINT ["/usr/local/bin/samblaster"]
