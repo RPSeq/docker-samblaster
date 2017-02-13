@@ -22,3 +22,4 @@ RUN apt-get update && \
     apt-get -y --purge autoremove g++ make git
 
 ENTRYPOINT ["/usr/local/bin/samblaster"]
+CMD ["-h"]
